@@ -1,24 +1,30 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-// import './App.css'
-import './layout.scss'
-import { Navbar } from './components'
-import Home from './pages/home/Home'
+import { 
+  createRoutesFromElements, 
+  createBrowserRouter, 
+  RouterProvider, 
+  Route 
+} from 'react-router-dom'
+import { 
+  Layout, 
+  Home,
+  ListPage,
+  SinglePage,
+ } from './pages'
+
 
 function App() {
-  const [count, setCount] = useState(0)
 
-  return (
-    <div className='layout'>
-      <div className="navbar">
-        <Navbar />
-      </div>
-      <div className="content">
-        <Home />
-      </div>
-    </div>
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      <Route path='/' element={<Layout />}>
+        <Route path='' element={<Home />}/>
+        <Route path='list' element={<ListPage />}/>
+        <Route path=':id' element={<SinglePage />}/>
+      </Route>
+    )
   )
+
+  return <RouterProvider router={router} />
 }
 
 export default App
