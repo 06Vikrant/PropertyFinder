@@ -9,6 +9,7 @@ import {
   Home,
   ListPage,
   SinglePage,
+  ProfilePage,
  } from './pages'
 
 
@@ -20,6 +21,7 @@ function App() {
         <Route path='' element={<Home />}/>
         <Route path='list' element={<ListPage />}/>
         <Route path=':id' element={<SinglePage />}/>
+        <Route path='profile' element={<ProfilePage />}/>
       </Route>
     )
   )

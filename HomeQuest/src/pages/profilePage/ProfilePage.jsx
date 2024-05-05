@@ -1,7 +1,7 @@
 import React from 'react'
 import './style.scss';
 
-import { UserList } from '../../components'
+import { Chat, UserList } from '../../components'
 
 const Profile = () => {
   return (
@@ -31,7 +31,7 @@ const Profile = () => {
       </div>
       <div className="chatContainer">
         <div className="wrapper">
-
+          <Chat />
         </div>
       </div>
     </div>
