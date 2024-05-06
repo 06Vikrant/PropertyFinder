@@ -5,7 +5,7 @@ import './style.scss'
 const Navbar = () => {
     const [open, setOpen] = useState(false)
 
-    const user = true;
+    const user = null;
 
   return (
     <nav>
@@ -31,8 +31,8 @@ const Navbar = () => {
                 </div>
                 ) : (
                 <>
-                    <a href="/">Sign in</a>
-                    <a href="/" className='register'>Sign up</a>
+                    <Link to="/login">Sign in</Link>
+                    <Link to="/register" className='register'>Sign up</Link>
                 </>
                 )}
             <div className="menuIcon">
@@ -47,8 +47,8 @@ const Navbar = () => {
                 <a href="/">About</a>
                 <a href="/">Contact</a>
                 <a href="/">Agents</a>
-                <a href="/">Sing in</a>
-                <a href="/">Sign up</a>
+                <Link to="/login">Sing in</Link>
+                <Link to="/register">Sign up</Link>
             </div>
         </div>
     </nav>

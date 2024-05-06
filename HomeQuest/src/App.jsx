@@ -10,6 +10,8 @@ import {
   ListPage,
   SinglePage,
   ProfilePage,
+  LoginPage,
+  Register,
  } from './pages'
 
 
@@ -22,6 +24,8 @@ function App() {
         <Route path='list' element={<ListPage />}/>
         <Route path=':id' element={<SinglePage />}/>
         <Route path='profile' element={<ProfilePage />}/>
+        <Route path='login' element={<LoginPage />}/>
+        <Route path='register' element={<Register />}/>
       </Route>
     )
   )

@@ -1,5 +1,6 @@
 import React from 'react'
 import { singlePostData, userData } from '../../lib/dummydata'
+import { Link } from 'react-router-dom'
 import './style.scss'
 
 import { Map, Slider } from '../../components'
@@ -107,7 +108,7 @@ const SinglePage = () => {
             </button>
             <button>
               <img src="/save.png" alt="" />
-              Save the Places
+              <Link to='/login'>Save the Places</Link>
             </button>
           </div>
         </div>
